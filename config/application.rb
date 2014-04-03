@@ -19,5 +19,11 @@ module ArrayTable
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+
+    # Load all ruby files in the following directories. Note that for the class
+    # in each file to load automatically, it has to have the same name as the file
+    # but with ConstantCaps. E.g. my_class.rb must contain a class named MyClass.
+    config.autoload_paths += ["#{ Rails.root }/lib/autoloadables"]
   end
 end

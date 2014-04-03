@@ -53,4 +53,10 @@ ArrayTable::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+
+  # Basically: "for the request with HTTP method 'get' and path 'array_table/',
+  # use the array_table controller, specifically its index action.
+  get 'array_table' => 'array_table#index'
 end
